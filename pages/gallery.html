@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/uikit.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/uikit.js"></script>
+    <script src="../js/uikit-icons.js"></script>
+
+    <title>Gallery</title>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">    
+    <div class="uk-navbar-left">
+        <a href="" class="uk-navbar-item uk-logo uk-light">JIN.H KIM</a>
+    </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-light">
+            <li><a class="uk-button-text uk-text-capitalize" href="../index.html#about">About</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="publication.html">Publication</a></li>
+            <li>
+                <a class="uk-button-text uk-text-capitalize" href="#">Course</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#undergraduate">Undergraduate</a></li>
+                        <li><a href="#graduate">Graduate</a></li>
+                        <li><a href="#f1tenth">F1Tenth Program</a></li>
+                        <li><a href="#machinelearning">Machine Learning</a></li>
+                        <li><a href="#modelchecking">Model Checking</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="uk-button-text uk-text-capitalize" href="../index.html#projects">Project</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="../index.html#paptent">Patent</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="../index.html#software">Software</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="mailto:jin.kim@gnu.ac.kr">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Navigation Bar Ends  -->
+
+<!-- Navigation Bar Mobile -->
+<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <div class="uk-navbar-left">
+        <a href="" class="uk-navbar-item uk-logo uk-light">J.H KIM</a>
+    </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-light">
+            <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
+        </ul>
+    </div>
+</nav>
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li class="uk-active"><a href="#" uk-scroll>Home</a></li>
+            <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
+            <li class="uk-active"><a href="#projects" uk-scroll>Projects</a></li>
+            <li class="uk-active"><a href="mailto:jin.kim@gnu.ac.kr">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Navigation Bar Mobile Ends -->
+
+<hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
+
+<!-- Photo Gallery Section -->
+<section id="gallery" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <h3 class="uk-margin-xlarge-left uk-light">Photo Gallery</h3>
+    <p class="uk-margin-xlarge-left">A collection of photos</p>
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right uk-child-width-1-3@s uk-child-width-1-2@m uk-child-width-1-3@l uk-grid-match" uk-grid>
+        <!-- Add your photos here -->
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="images/photo1.jpg" alt="Photo 1" class="uk-width-1-1" style="max-height: 300px; object-fit: cover;">
+                <h4>Photo Title 1</h4>
+                <p>Short description of the photo 1.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="images/photo2.jpg" alt="Photo 2" class="uk-width-1-1" style="max-height: 300px; object-fit: cover;">
+                <h4>Photo Title 2</h4>
+                <p>Short description of the photo 2.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="images/photo3.jpg" alt="Photo 3" class="uk-width-1-1" style="max-height: 300px; object-fit: cover;">
+                <h4>Photo Title 3</h4>
+                <p>Short description of the photo 3.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="images/photo4.jpg" alt="Photo 4" class="uk-width-1-1" style="max-height: 300px; object-fit: cover;">
+                <h4>Photo Title 4</h4>
+                <p>Short description of the photo 4.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="images/photo5.jpg" alt="Photo 5" class="uk-width-1-1" style="max-height: 300px; object-fit: cover;">
+                <h4>Photo Title 5</h4>
+                <p>Short description of the photo 5.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="images/photo6.jpg" alt="Photo 6" class="uk-width-1-1" style="max-height: 300px; object-fit: cover;">
+                <h4>Photo Title 6</h4>
+                <p>Short description of the photo 6.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
