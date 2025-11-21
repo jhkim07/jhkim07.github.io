@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">
+        <a href="{{ '/' | relative_url }}">JIN H KIM</a>
+      </h1>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+          <li><a href="{{ '/biography' | relative_url }}#bio">Biography</a></li>
+          <li><a href="{{ '/publications' | relative_url }}#research">Publication</a></li>
+          <!-- Project dropdown -->
+          <li class="has-dropdown">
+            <a href="#">Research </a>
+            <ul class="dropdown">
+              <li><a href="{{ '/research/medical' | relative_url }}">Medical</a></li>
+              <li><a href="{{ '/research/ai-robot' | relative_url }}">AI Robot</a></li>
+              <li>
+                <a href="{{ '/research/formal-verification' | relative_url }}">
+                  Formal Verification
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="{{ '/projects' | relative_url }}#projects">Projects</a></li>
+          
+          <!-- Class dropdown -->
+          <li class="has-dropdown">
+            <a href="#">Class</a>
+            <ul class="dropdown">
+              <li>
+                <a href="{{ '/classes/roboracer' | relative_url }}">
+                  RoboRacer (AI Robot)
+                </a>
+              </li>
+              <li>
+                <a href="{{ '/classes/ai-introduction' | relative_url }}">
+                  AI Introduction
+                </a>
+              </li>
+              <li>
+                <a href="{{ '/classes/software-engineering' | relative_url }}">
+                  Software Engineering
+                </a>
+              </li>
+              <li>
+                <a href="{{ '/classes/data-structure' | relative_url }}">
+                  Data Structure
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> JIN H KIM. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
