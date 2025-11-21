@@ -62,8 +62,6 @@ title: "Home"
   </div>
 </section>
 
-
-
 <section id="contact" class="section">
   <div class="container">
     <h2>Contact</h2>
