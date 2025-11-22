@@ -293,3 +293,10 @@ a:hover {
 a:active {
   color: #ffd54a;
 }
+
+.markdown-container {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;        /* 가운데 정렬 */
+  padding: 2rem 0;       /* 위·아래 여백 */
+  line-height: 1.7;
+}

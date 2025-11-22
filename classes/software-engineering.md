@@ -4,27 +4,28 @@ title: "Software Engineering"
 ---
 
 <section class="section">
-  <div class="container">
-    <h2>Software Engineering</h2>
-    <p class="section-text">
-      This course covers <strong>principles and practices of software
-      engineering</strong>, including requirements, design, implementation,
-      testing, and maintenance of reliable software systems.
-    </p>
+  <div class="container" markdown="1">
 
-    <h3>Core Contents</h3>
-    <ul class="section-text">
-      <li>Requirements engineering and system modeling</li>
-      <li>Architecture, design patterns, and modularity</li>
-      <li>Testing, verification, and quality assurance</li>
-      <li>Team-based development with version control</li>
-    </ul>
+# Software Engineering
 
-    <h3>Relation to Research</h3>
-    <ul class="section-text">
-      <li>Links to software verification and validation</li>
-      <li>Examples from CPS and medical software</li>
-      <li>Emphasis on building trustworthy systems</li>
-    </ul>
+This course covers **principles and practices of software engineering**,  
+including requirements, design, implementation, testing, and maintenance  
+of reliable and trustworthy software systems.
+
+## Core Contents
+- Requirements engineering and system modeling  
+- Architecture, design patterns, and modularity  
+- Testing, verification, and quality assurance  
+- Team-based development with version control  
+
+## Relation to Research
+- Links to software verification and validation  
+- Examples from CPS and medical software  
+- Emphasis on building trustworthy and safe systems  
+
+## Instructor
+**Prof. Jin Hyun Kim**  
+Cyber Safety Lab · Gyeongsang National University
+
   </div>
 </section>

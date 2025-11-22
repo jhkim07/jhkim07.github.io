@@ -1,32 +1,32 @@
 ---
 layout: default
-title: "RoboRacer (AI Robot)"
+title: "RoboRacer (F1TENTH)"
 ---
 
 <section class="section">
-  <div class="container">
-    <h2>RoboRacer (AI Robot)</h2>
-    <p class="section-text">
-      RoboRacer is a project-based course that uses an autonomous racing
-      platform (e.g., F1TENTH) to teach <strong>perception</strong>,
-      <strong>planning</strong>, and <strong>control</strong> with a strong
-      focus on safety.
-    </p>
+  <div class="container" markdown="1">
 
-    <h3>Course Highlights</h3>
-    <ul class="section-text">
-      <li>ROS2-based software stack for autonomous racing</li>
-      <li>LiDAR perception, gap-following, and AEB implementation</li>
-      <li>Reinforcement learning for adaptive control</li>
-      <li>Team-based racing events and performance evaluation</li>
-    </ul>
+# RoboRacer (F1TENTH)
 
-    <h3>Typical Topics</h3>
-    <ul class="section-text">
-      <li>Sensor models and time-to-collision</li>
-      <li>Pure pursuit and look-ahead control</li>
-      <li>Simulation vs. real-world transfer</li>
-      <li>Safety monitors and fallback strategies</li>
-    </ul>
+This course introduces the fundamentals of autonomous driving using the **F1TENTH RoboRacer platform**.  
+Students learn perception, planning, and control algorithms through hands-on labs and real-world racing challenges.
+
+## Course Overview
+- ROS2-based autonomous system development  
+- LiDAR processing and safety (AEB, Gap Follow)  
+- SLAM, localization, and mapping  
+- Reinforcement-learning-based look-ahead controller  
+- F1TENTH Race: time attack & obstacle racing  
+
+## Course Materials
+- 📘 Lecture slides and reading notes  
+- 🧪 Labs: Teleop, AEB, GapFollow, Pure Pursuit, SLAM, RL-based control  
+- 🛞 Race evaluation sheets and scoring rules  
+- 📦 GitHub resources (simulation & ROS2 packages)  
+
+## Instructor
+**Prof. Jin Hyun Kim**  
+Cyber Safety Lab · Gyeongsang National University
+
   </div>
 </section>
