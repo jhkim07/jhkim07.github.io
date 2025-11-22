@@ -17,11 +17,12 @@ pipeline of autonomous driving — **perception**, **planning**,
 
 This course follows the official **UPenn F1TENTH curriculum** and  
 guides students through an end-to-end workflow:  
-**Ubuntu → ROS2 → LiDAR perception → AEB → PID control →  
+Ubuntu → ROS2 → LiDAR perception → AEB → PID control →  
 Follow-the-Gap → Particle Filter Localization → Graph-based SLAM →  
-Pure Pursuit → Real-world racing**.
+Pure Pursuit → Real-world racing.
 
-<a href="https://docs.google.com/spreadsheets/d/10ByBWL33BQAV9M9RW_oltsI4WBXRI1OJZFbbN4Ozdos/edit?usp=sharing"> Full weekly schedule (Syllabus) </a>
+**Full weekly schedule (Syllabus)** <a href="https://docs.google.com/spreadsheets/d/10ByBWL33BQAV9M9RW_oltsI4WBXRI1OJZFbbN4Ozdos/edit?usp=sharing"> Here </a>
+
 ---
 
 ## 🔥 Course Overview
@@ -86,8 +87,7 @@ UPenn 공식 F1TENTH 커리큘럼을 기반으로,
 PF Localization → SLAM → Pure Pursuit → 실차 레이싱**  
 에 이르는 실전 자율주행 시스템을 단계별로 구축합니다.
 
-전체 강의 Syllabus는 다음에서 확인할 수 있습니다.  
-<a href="https://docs.google.com/spreadsheets/d/10ByBWL33BQAV9M9RW_oltsI4WBXRI1OJZFbbN4Ozdos/edit?usp=sharing"> Full weekly schedule (Syllabus) </a>
+전체 강의 Syllabus는 다음에서 확인할 수 있습니다: <a href="https://docs.google.com/spreadsheets/d/10ByBWL33BQAV9M9RW_oltsI4WBXRI1OJZFbbN4Ozdos/edit?usp=sharing"> Full weekly schedule (Syllabus) </a>
 
 ---
 

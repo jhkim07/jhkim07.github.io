@@ -19,7 +19,7 @@ Python programming, data science tools (NumPy, Pandas, Matplotlib),
 feature engineering, core ML algorithms, and deep learning architectures  
 including **MLP, CNN, and RNN**, culminating in a **hands-on Seq2Seq project**. :contentReference[oaicite:0]{index=0}
 
-<a href="https://docs.google.com/spreadsheets/d/1UnP3uyS8eVAtAwCCJjBx_ix_8oH8C6B48YJ_OA2tisY/edit?usp=sharing"> Full weekly schedule (Syllabus) </a>
+**Full weekly schedule (Syllabus)**: <a href="https://docs.google.com/spreadsheets/d/1UnP3uyS8eVAtAwCCJjBx_ix_8oH8C6B48YJ_OA2tisY/edit?usp=sharing"> Here </a>
 
 ---
 
@@ -102,8 +102,7 @@ Python 프로그래밍과 데이터 분석 도구(NumPy, Pandas, Matplotlib),
 그리고 **MLP, CNN, RNN**과 같은 딥러닝 모델을 다룹니다.  
 학기 말에는 **RNN 기반 Seq2Seq 모델을 직접 구현하는 실습**까지 진행합니다.
 
-전체 강의 Syllabus는 다음에서 확인할 수 있습니다.  
-<a href="https://docs.google.com/spreadsheets/d/1UnP3uyS8eVAtAwCCJjBx_ix_8oH8C6B48YJ_OA2tisY/edit?usp=sharing"> Full weekly schedule (Syllabus) </a>
+전체 강의 Syllabus는 다음에서 확인할 수 있습니다: <a href="https://docs.google.com/spreadsheets/d/1UnP3uyS8eVAtAwCCJjBx_ix_8oH8C6B48YJ_OA2tisY/edit?usp=sharing"> Full weekly schedule (Syllabus) </a>
 
 ---
 

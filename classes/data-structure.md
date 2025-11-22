@@ -17,8 +17,7 @@ covering algorithm analysis, linear and non-linear structures,
 recursion, graph basics, sorting, and searching.  
 :contentReference[oaicite:1]{index=1}
 
-The complete weekly schedule is available here:  
-👉 https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing
+**Full weekly schedule (Syllabus)**: <a herf="https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing"> Here </a>
 
 ---
 
@@ -109,8 +108,7 @@ Cyber Safety Lab · Gyeongsang National University
 으로 이어지는 전형적인 자료구조 커리큘럼을 체계적으로 학습합니다.  
 :contentReference[oaicite:3]{index=3}
 
-전체 주차별 스케줄은 아래에서 확인 가능합니다.  
-👉 https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing
+전체 주차별 스케줄은 아래에서 확인 가능합니다: 👉 <a herf="https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing"> 여기 </a>
 
 ---
 
@@ -163,9 +161,7 @@ Cyber Safety Lab · Gyeongsang National University
 - 정렬·탐색 실습  
 - 주차별 과제 제출  
 
-실습은 syllabus의 **Lab-01 → Lab-06 → Stack/Queue Lab → Sorting** 과  
-직접 연결되어 있습니다.  
-:contentReference[oaicite:4]{index=4}
+ 
 
 ---
 
