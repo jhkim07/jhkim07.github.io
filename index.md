@@ -10,7 +10,7 @@ title: "Home"
       <img src="{{ '/assets/images/main-photo.jpg' | relative_url }}" alt="Jin H Kim">
     </div>
     <div class="hero-text">
-      <p class="tagline">Associate Professor · Cyber Safety Lab · Gyeongsang National University</p>
+      <p class="tagline">Associate Professor · Cyber Safety Lab · <a href="https://gnu.ac.kr">Gyeongsang National University</a> | </p>
       <h2>About Me</h2>
       <p>
         I am an <strong>associate professor</strong> in the Department of AI Information Engineering

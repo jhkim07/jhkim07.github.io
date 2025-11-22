@@ -269,3 +269,27 @@ body {
     padding: 2.5rem 0;
   }
 }
+
+/* ===== GLOBAL LINK COLORS ===== */
+
+/* 기본 링크 색 */
+a {
+  color: #ffcc33;     /* 밝은 골드 */
+  text-decoration: none;
+}
+
+/* 방문한 링크 */
+a:visited {
+  color: #ffdd66;     /* 더 연한 골드 */
+}
+
+/* Hover (마우스 올렸을 때) */
+a:hover {
+  color: #ffe799;     /* 조금 더 밝은 색 */
+  text-decoration: underline;
+}
+
+/* 클릭 중(active) */
+a:active {
+  color: #ffd54a;
+}
