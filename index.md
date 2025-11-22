@@ -10,7 +10,7 @@ title: "Home"
       <img src="{{ '/assets/images/main-photo.jpg' | relative_url }}" alt="Jin H Kim">
     </div>
     <div class="hero-text">
-      <p class="tagline">Associate Professor · AI Safety & CPS</p>
+      <p class="tagline">Associate Professor · Cyber Safety Lab · Gyeongsang National University</p>
       <h2>About Me</h2>
       <p>
         I am an <strong>associate professor</strong> in the Department of AI Information Engineering
@@ -33,13 +33,21 @@ title: "Home"
         <strong>Kim G. Larsen</strong>, <strong>Axel Legay</strong>, and <strong>Sungwon Kang</strong>.
       </p>
 
-      <!-- ⭐ 추가된 이메일 섹션 -->
+        <!-- ⭐ Updated contact section with LinkedIn + CV -->
       <p class="contact-email">
         <strong>Email:</strong>
         <a href="mailto:jin.kim@gnu.ac.kr">jin.kim@gnu.ac.kr</a> |
-        <a href="mailto:jhkim07@gmail.com">jhkim07@gmail.com</a>
+        <a href="mailto:jhkim07@gmail.com">jhkim07@gmail.com</a> |
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/jin-h-kim" target="_blank">
+          linkedin.com/in/jin-h-kim
+        </a> |
+        <strong>CV:</strong>
+        <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank">
+          Download CV
+        </a>
       </p>
-      
+            
     </div>
   </div>
 </section>
