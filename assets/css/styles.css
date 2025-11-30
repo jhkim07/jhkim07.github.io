@@ -312,3 +312,40 @@ a:active {
 .pub-wrapper ul.section-text {
     padding-left: 1.2em;
 }
+
+/* Navigation Bar Height 줄이기 */
+.navbar {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* 메뉴 간 간격 줄이기 */
+.navbar-nav > li > a {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+/* 로고(이름) 부분 패딩도 조절 */
+.navbar-brand {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.navbar {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+.page-section,
+.section,
+.container {
+    margin-top: 0 !important;
+    padding-top: 20px;  /* 너무 붙어보이지 않게 최소 여백만 */
+}
+
+
+header,
+#header,
+.navbar {
+    margin-bottom: 0 !important;
+    padding-bottom: 10px !important;
+}
