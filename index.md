@@ -38,9 +38,9 @@ title: "Home"
         <strong>Email:</strong>
         <a href="mailto:jin.kim@gnu.ac.kr">jin.kim@gnu.ac.kr</a> |
         <a href="mailto:jhkim07@gmail.com">jhkim07@gmail.com</a> |
-        <strong>LinkedIn:</strong>
-        <a href="https://www.linkedin.com/in/jin-h-kim" target="_blank">
-          linkedin.com/in/jin-h-kim
+        <strong>Lab Homepage:</strong>
+        <a href="https://aix.gnu.ac.kr" target="_blank">
+          AiX Lab@GNU
         </a> |
         <strong>CV:</strong>
         <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank">
