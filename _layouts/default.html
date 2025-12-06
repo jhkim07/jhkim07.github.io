@@ -5,6 +5,65 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{ page.description | default: site.description }}" />
+
+  <!-- 검색 엔진 최적화 (SEO) -->
+  <meta name="description"
+        content="Jin Hyun Kim — Associate Professor at Gyeongsang National University. Research in AI safety, cyber-physical systems, medical AI, autonomous driving, and trustworthy domain-specialized LLMs such as Ophtimus.">
+  <meta name="keywords"
+        content="Jin Hyun Kim, 김진현 교수, AI Safety, CPS Verification, Cyber-Physical Systems, Medical AI, Ophthalmology AI, Ophtimus, Autonomous Driving, F1TENTH, RoboRacer, Formal Methods, GNU">
+  <meta name="author" content="Prof. Jin Hyun Kim">
+  <meta name="publisher" content="Cyber Safety Lab, Gyeongsang National University">
+
+  <!-- Open Graph (Facebook, LinkedIn, Slack 등) -->
+  <meta property="og:title" content="Prof. Jin Hyun Kim | AI Safety · CPS Verification · Medical AI">
+  <meta property="og:description"
+        content="Associate Professor at Gyeongsang National University. Researching safety of AI, formal verification, cyber-physical systems, medical AI, and domain-specialized LLMs such as Ophtimus.">
+  <meta property="og:url" content="https://jin-kim.net">
+  <meta property="og:site_name" content="Jin-Kim.net">
+  <meta property="og:type" content="website">
+  <!-- 필요하면 연구실 프로필 이미지 또는 본인 사진 경로로 교체 -->
+  <meta property="og:image" content="https://jin-kim.net/images/profile.jpg">
+
+  <!-- Twitter Card (X) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prof. Jin Hyun Kim | AI Safety & CPS Verification">
+  <meta name="twitter:description"
+        content="Researcher in AI safety, software verification, cyber-physical systems, autonomous driving, and medical AI including Ophtimus LLM.">
+  <meta name="twitter:image" content="https://jin-kim.net/images/profile.jpg">
+
+  <!-- Schema.org JSON-LD (Google 인물 정보 + 연구자 전문성 강조) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jin Hyun Kim",
+    "jobTitle": "Associate Professor",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Gyeongsang National University"
+    },
+    "url": "https://jin-kim.net",
+    "image": "https://jin-kim.net/images/profile.jpg",
+    "description": "Researcher specializing in AI safety, cyber-physical systems verification, trustworthy medical AI, and ophthalmology-focused LLMs such as Ophtimus.",
+    "researcherID": "AiX-Lab",
+    "knowsAbout": [
+      "AI Safety",
+      "Cyber-Physical Systems",
+      "Formal Verification",
+      "Medical AI",
+      "Autonomous Racing",
+      "Domain-Specific LLMs",
+      "Ophthalmology AI"
+    ],
+    "alumniOf": [
+      "KAIST",
+      "University of Pennsylvania",
+      "Aalborg University"
+    ]
+  }
+  </script>
+ 
+
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
