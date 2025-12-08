@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Korean Conferences"
+lang: ko
 ---
 
 <section class="section">

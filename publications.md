@@ -2,6 +2,7 @@
 
 layout: default
 title: "Publications"
+lang: en
 --- 
 
 <section class="section">

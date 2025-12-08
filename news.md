@@ -55,7 +55,7 @@ title: "Home"
       For collaboration or inquiries, please contact me via email.
     </p>
     <p class="contact-email">
-      Email: <a href="mailto:jinhkim@gnu.ac.kr">jinhkim@gnu.ac.kr</a>
+      Email: <a href="mailto:jin.kim@gnu.ac.kr">jin.kim@gnu.ac.kr</a>
     </p>
   </div>
 </section>

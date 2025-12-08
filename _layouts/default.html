@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8" />
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="{{ page.description | default: site.description }}" />
-
   <!-- 검색 엔진 최적화 (SEO) -->
   <meta name="description"
-        content="Jin Hyun Kim — Associate Professor at Gyeongsang National University. Research in AI safety, cyber-physical systems, medical AI, autonomous driving, and trustworthy domain-specialized LLMs such as Ophtimus.">
+        content="{{ page.description | default: 'Jin Hyun Kim — Associate Professor at Gyeongsang National University. Research in AI safety, cyber-physical systems, medical AI, autonomous driving, and trustworthy domain-specialized LLMs such as Ophtimus.' }}">
   <meta name="keywords"
         content="Jin Hyun Kim, 김진현 교수, AI Safety, CPS Verification, Cyber-Physical Systems, Medical AI, Ophthalmology AI, Ophtimus, Autonomous Driving, F1TENTH, RoboRacer, Formal Methods, GNU">
   <meta name="author" content="Prof. Jin Hyun Kim">
@@ -22,14 +20,14 @@
   <meta property="og:site_name" content="Jin-Kim.net">
   <meta property="og:type" content="website">
   <!-- 필요하면 연구실 프로필 이미지 또는 본인 사진 경로로 교체 -->
-  <meta property="og:image" content="https://jin-kim.net/images/profile.jpg">
+  <meta property="og:image" content="https://jin-kim.net{{ '/assets/images/main-photo.jpg' | relative_url }}">
 
   <!-- Twitter Card (X) -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Prof. Jin Hyun Kim | AI Safety & CPS Verification">
   <meta name="twitter:description"
         content="Researcher in AI safety, software verification, cyber-physical systems, autonomous driving, and medical AI including Ophtimus LLM.">
-  <meta name="twitter:image" content="https://jin-kim.net/images/profile.jpg">
+  <meta name="twitter:image" content="https://jin-kim.net{{ '/assets/images/main-photo.jpg' | relative_url }}">
 
   <!-- Schema.org JSON-LD (Google 인물 정보 + 연구자 전문성 강조) -->
   <script type="application/ld+json">
@@ -43,7 +41,7 @@
       "name": "Gyeongsang National University"
     },
     "url": "https://jin-kim.net",
-    "image": "https://jin-kim.net/images/profile.jpg",
+    "image": "https://jin-kim.net/assets/images/main-photo.jpg",
     "description": "Researcher specializing in AI safety, cyber-physical systems verification, trustworthy medical AI, and ophthalmology-focused LLMs such as Ophtimus.",
     "researcherID": "AiX-Lab",
     "knowsAbout": [
@@ -67,37 +65,44 @@
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="logo">
         <a href="{{ '/' | relative_url }}">JIN HYUN KIM</a>
       </h1>
 
-      <nav class="nav">
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-toggle-icon"></span>
+        <span class="menu-toggle-icon"></span>
+        <span class="menu-toggle-icon"></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="{{ '/' | relative_url }}#about">About</a></li>
           <li><a href="{{ '/biography' | relative_url }}#bio">Biography</a></li>
           <!-- Publication dropdown -->
           <li class="has-dropdown">
-            <a href="{{ '/publications' | relative_url }}#research">Publication</a>
-            <ul class="dropdown">
-              <li>
-                <a href="{{ '/publications/journals' | relative_url }}">
+            <a href="{{ '/publications' | relative_url }}#research" aria-haspopup="true" aria-expanded="false">Publication</a>
+            <ul class="dropdown" role="menu">
+              <li role="none">
+                <a href="{{ '/publications/journals' | relative_url }}" role="menuitem">
                   Journals
                 </a>
               </li>
-              <li>
-                <a href="{{ '/publications/conferences' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/publications/conferences' | relative_url }}" role="menuitem">
                   Conferences
                 </a>
               </li>
-              <li>
-                <a href="{{ '/publications/korean-journals' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/publications/korean-journals' | relative_url }}" role="menuitem">
                   Korean Journals
                 </a>
               </li>
-              <li>
-                <a href="{{ '/publications/korean-conferences' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/publications/korean-conferences' | relative_url }}" role="menuitem">
                   Korean Conferences
                 </a>
               </li>
@@ -105,12 +110,12 @@
           </li>
           <!-- Project dropdown -->
           <li class="has-dropdown">
-            <a href="#">Research </a>
-            <ul class="dropdown">
-              <li><a href="{{ '/research/medical' | relative_url }}">Medical AI</a></li>
-              <li><a href="{{ '/research/ai-robot' | relative_url }}">Robot AI</a></li>
-              <li>
-                <a href="{{ '/research/formal-verification' | relative_url }}">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Research </a>
+            <ul class="dropdown" role="menu">
+              <li role="none"><a href="{{ '/research/medical' | relative_url }}" role="menuitem">Medical AI</a></li>
+              <li role="none"><a href="{{ '/research/ai-robot' | relative_url }}" role="menuitem">Robot AI</a></li>
+              <li role="none">
+                <a href="{{ '/research/formal-verification' | relative_url }}" role="menuitem">
                   Formal Verification
                 </a>
               </li>
@@ -120,35 +125,35 @@
           
           <!-- Class dropdown -->
           <li class="has-dropdown">
-            <a href="#">Class</a>
-            <ul class="dropdown">
-              <li>
-                <a href="{{ '/classes/ai-robotsystems' | relative_url }}">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Class</a>
+            <ul class="dropdown" role="menu">
+              <li role="none">
+                <a href="{{ '/classes/ai-robotsystems' | relative_url }}" role="menuitem">
                   AI Robot Systems
                 </a>
               </li>
-              <li>
-                <a href="{{ '/classes/ai-introduction' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/classes/ai-introduction' | relative_url }}" role="menuitem">
                   AI Introduction
                 </a>
               </li>
-              <li>
-                <a href="{{ '/classes/software-engineering' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/classes/software-engineering' | relative_url }}" role="menuitem">
                   Software Engineering
                 </a>
               </li>
-              <li>
-                <a href="{{ '/classes/data-structure' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/classes/data-structure' | relative_url }}" role="menuitem">
                   Data Structure
                 </a>
               </li>
-              <li>
-                <a href="{{ '/classes/capstone-design' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/classes/capstone-design' | relative_url }}" role="menuitem">
                   Capstone Design 
                 </a>
               </li>  
-              <li>
-                <a href="{{ '/classes/roboracer' | relative_url }}">
+              <li role="none">
+                <a href="{{ '/classes/roboracer' | relative_url }}" role="menuitem">
                   RoboRacer (F1Tenth)
                 </a>
               </li>
@@ -163,7 +168,7 @@
 
 
 
-  <main class="main-content">
+  <main class="main-content" id="main-content">
     {{ content }}
   </main>
 
@@ -175,6 +180,80 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    (function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav');
+      const dropdowns = document.querySelectorAll('.has-dropdown > a');
+      
+      if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !isExpanded);
+          nav.classList.toggle('nav-open');
+          document.body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('nav-open');
+            document.body.classList.remove('menu-open');
+          }
+        });
+      }
+      
+      // Keyboard navigation for dropdowns (mobile only)
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      
+      dropdowns.forEach(function(dropdown) {
+        // Only prevent default on mobile for dropdown toggle links
+        if (isMobile && !dropdown.getAttribute('href') || dropdown.getAttribute('href') === '#') {
+          dropdown.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other dropdowns
+            dropdowns.forEach(function(other) {
+              if (other !== dropdown) {
+                other.setAttribute('aria-expanded', 'false');
+                other.parentElement.classList.remove('dropdown-open');
+              }
+            });
+            
+            // Toggle current dropdown
+            this.setAttribute('aria-expanded', !isExpanded);
+            parent.classList.toggle('dropdown-open');
+          });
+        }
+        
+        // Keyboard support
+        dropdown.addEventListener('keydown', function(e) {
+          const href = this.getAttribute('href');
+          // Only prevent default if it's a toggle link (no href or #)
+          if ((!href || href === '#') && (e.key === 'Enter' || e.key === ' ')) {
+            e.preventDefault();
+            this.click();
+          } else if (e.key === 'Escape') {
+            this.setAttribute('aria-expanded', 'false');
+            this.parentElement.classList.remove('dropdown-open');
+          }
+        });
+      });
+      
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.has-dropdown')) {
+          dropdowns.forEach(function(dropdown) {
+            dropdown.setAttribute('aria-expanded', 'false');
+            dropdown.parentElement.classList.remove('dropdown-open');
+          });
+        }
+      });
+    })();
   </script>
 </body>
 </html>

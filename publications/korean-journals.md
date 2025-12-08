@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Korean Journals"
+lang: ko
 ---
 
 <section class="section">

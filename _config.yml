@@ -6,7 +6,7 @@ repository: "jhkim07/jhkim07.github.io"
 
 # 사이트 기본 설정
 baseurl: ""      # GitHub Pages user site라서 빈 문자열
-url: "https://jhkim07.github.io"
+url: "https://jin-kim.net"
 
 markdown: kramdown
 permalink: pretty
