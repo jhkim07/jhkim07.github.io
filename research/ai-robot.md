@@ -18,7 +18,7 @@ title: "AI Robot Projects"
         <nav>
           <ul class="sidebar-menu">
             <li class="sidebar-menu-item">
-              <a href="#robot-racing" class="sidebar-menu-link active" data-section="robot-racing">Robot Racing</a>
+              <a href="#robot-racing" class="sidebar-menu-link active" data-section="robot-racing">RoboRacer</a>
             </li>
             <li class="sidebar-menu-item">
               <a href="#rl-racing-optimization" class="sidebar-menu-link" data-section="rl-racing-optimization">RL Racing Optimization</a>
@@ -29,9 +29,9 @@ title: "AI Robot Projects"
 
       <!-- 우측 콘텐츠 영역 -->
       <div class="research-content">
-        <!-- Robot Racing 섹션 -->
+        <!-- RoboRacer 섹션 -->
         <div id="robot-racing" class="research-content-section active">
-          <h3>Robot Racing</h3>
+          <h3>RoboRacer</h3>
           <p class="section-text">
             <em>To be Updated</em>
           </p>
