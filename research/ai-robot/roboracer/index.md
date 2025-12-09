@@ -9,16 +9,14 @@ title: "RoboRacer (F1TENTH)"
 
     <!-- Language Tabs -->
     <div class="language-tabs">
-      <input type="radio" id="lang-ko" name="language" value="ko" checked style="display: none;">
-      <input type="radio" id="lang-en" name="language" value="en" style="display: none;">
-      <label for="lang-ko" class="lang-tab active">한국어</label>
-      <label for="lang-en" class="lang-tab">English</label>
+      <button type="button" class="lang-tab active" data-lang="ko">한국어</button>
+      <button type="button" class="lang-tab" data-lang="en">English</button>
     </div>
 
     <!-- Content Area -->
     <div id="content-area" class="content-area">
       <!-- Korean Content -->
-      <div id="ko-content" class="lang-content" data-lang="ko" style="display: block;">
+      <div id="ko-content" class="lang-content" data-lang="ko" style="display: block !important;">
         <p class="section-text">
           <strong>RoboRacer</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>)는 1/10 크기의 고성능 자율주행 레이싱 플랫폼으로,
           실제 자동차와 동일한 <strong>센서–계산–제어 파이프라인</strong>을 축소한 형태로 구현한 연구·교육용 오픈 플랫폼입니다.
@@ -261,7 +259,7 @@ title: "RoboRacer (F1TENTH)"
       </div>
       
       <!-- English Content -->
-      <div id="en-content" class="lang-content" data-lang="en" style="display: none;">
+      <div id="en-content" class="lang-content" data-lang="en" style="display: none !important;">
         <p class="section-text">
           <strong>RoboRacer</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>) is a high-performance 1/10-scale autonomous racing platform that implements a scaled-down version of the same <strong>sensor–computation–control pipeline</strong> as real vehicles, designed as an open platform for research and education.
         </p>
@@ -507,46 +505,53 @@ title: "RoboRacer (F1TENTH)"
 
 <script>
 (function() {
-  function updateLanguageTabs() {
-    const langKo = document.getElementById('lang-ko');
-    const langEn = document.getElementById('lang-en');
+  function initLanguageTabs() {
+    const langTabs = document.querySelectorAll('.lang-tab');
     const koContent = document.getElementById('ko-content');
     const enContent = document.getElementById('en-content');
-    const koLabel = document.querySelector('label[for="lang-ko"]');
-    const enLabel = document.querySelector('label[for="lang-en"]');
 
-    if (!langKo || !langEn || !koContent || !enContent) {
+    console.log('Initializing language tabs...');
+    console.log('langTabs:', langTabs.length);
+    console.log('koContent:', koContent);
+    console.log('enContent:', enContent);
+
+    if (!langTabs.length || !koContent || !enContent) {
       console.error('Language elements not found');
       return;
     }
 
-    function updateDisplay() {
-      if (langKo.checked) {
-        koContent.style.display = 'block';
-        enContent.style.display = 'none';
-        if (koLabel) koLabel.classList.add('active');
-        if (enLabel) enLabel.classList.remove('active');
-      } else if (langEn.checked) {
-        enContent.style.display = 'block';
-        koContent.style.display = 'none';
-        if (enLabel) enLabel.classList.add('active');
-        if (koLabel) koLabel.classList.remove('active');
-      }
-    }
+    langTabs.forEach(function(tab) {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        console.log('Tab clicked, lang:', lang);
 
-    // Add event listeners
-    langKo.addEventListener('change', updateDisplay);
-    langEn.addEventListener('change', updateDisplay);
-    
-    // Initial update
-    updateDisplay();
+        // Update active tab
+        langTabs.forEach(function(t) {
+          t.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        // Show/hide content
+        if (lang === 'ko') {
+          koContent.style.cssText = 'display: block !important;';
+          enContent.style.cssText = 'display: none !important;';
+          console.log('Showing Korean content');
+        } else if (lang === 'en') {
+          enContent.style.cssText = 'display: block !important;';
+          koContent.style.cssText = 'display: none !important;';
+          console.log('Showing English content');
+        }
+      });
+    });
   }
 
   // Run when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', updateLanguageTabs);
+    document.addEventListener('DOMContentLoaded', initLanguageTabs);
   } else {
-    updateLanguageTabs();
+    initLanguageTabs();
   }
 })();
 </script>
+
