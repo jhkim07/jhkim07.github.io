@@ -335,8 +335,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const section = document.getElementById(targetSection);
       if (section) {
         section.classList.add('active');
-        // Scroll to top of content area
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Don't scroll - let CSS handle the alignment
+        // This prevents the sidebar from moving
       }
     });
   });
@@ -368,8 +368,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const section = document.getElementById(targetSection);
       if (section) {
         section.classList.add('active');
-        // Scroll to top of content area
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Don't scroll - let CSS handle the alignment
+        // This prevents the sidebar from moving
       }
     });
   });
