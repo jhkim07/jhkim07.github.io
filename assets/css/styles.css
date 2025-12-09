@@ -807,7 +807,10 @@ body {
 
 /* Language tabs - CSS only solution */
 .language-tabs input[type="radio"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .language-tabs input[type="radio"]:checked + label {
@@ -821,49 +824,139 @@ body {
   display: none;
 }
 
-/* Show Korean content when lang-ko is checked */
-#lang-ko:checked ~ * #ko-content,
-#lang-ko:checked ~ .content-area #ko-content {
-  display: block;
+/* Enhanced design for RoboRacer page */
+.intro-section {
+  margin-bottom: 2.5rem;
 }
 
-/* Show English content when lang-en is checked */
-#lang-en:checked ~ * #en-content,
-#lang-en:checked ~ .content-area #en-content {
-  display: block;
+
+.feature-highlights {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
 }
 
-/* Alternative: Use sibling selector if the above doesn't work */
-.language-tabs:has(#lang-ko:checked) ~ .content-area #ko-content {
-  display: block;
+.feature-highlights li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text);
+  line-height: 1.7;
 }
 
-.language-tabs:has(#lang-en:checked) ~ .content-area #en-content {
-  display: block;
+.feature-highlights li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
 }
 
-/* Fallback: Use general sibling selector */
-#lang-ko:checked ~ .content-area #ko-content,
-#lang-en:checked ~ .content-area #en-content {
-  display: block;
+.image-container {
+  margin: 2.5rem 0;
+  text-align: center;
 }
 
-/* More specific fallback */
-body:has(#lang-ko:checked) #ko-content {
-  display: block !important;
+.image-container.full-width .content-image {
+  width: 100%;
+  max-width: 100%;
 }
 
-body:has(#lang-en:checked) #en-content {
-  display: block !important;
+.content-image {
+  max-width: 45%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body:has(#lang-ko:checked) #en-content {
-  display: none !important;
+.content-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 204, 51, 0.2);
 }
 
-body:has(#lang-en:checked) #ko-content {
-  display: none !important;
+.image-caption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  font-style: italic;
 }
+
+.section-divider {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  opacity: 0.5;
+}
+
+.research-focus {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.research-focus h4 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.research-focus h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.highlight-box {
+  background: rgba(255, 204, 51, 0.08);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+  font-style: italic;
+}
+
+.related-links {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Improved typography for research sections */
+.lang-content h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  font-size: 1.75rem;
+}
+
+.lang-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.lang-content h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.lang-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.lang-content li {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+
 
 /* ===== SIDEBAR NAVIGATION ===== */
 .research-layout {
