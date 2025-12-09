@@ -6,11 +6,6 @@ title: "AI Robot Projects"
 <section class="section">
   <div class="container">
     <h2 class="section-title">AI Robot Projects</h2>
-    <p class="section-text">
-      This page introduces projects on <strong>autonomous driving</strong>,
-      <strong>F1TENTH racing</strong>, and <strong>robotic platforms</strong>
-      used for education and research on safe AI.
-    </p>
 
     <div class="research-layout">
       <!-- 좌측 사이드바 메뉴 -->
