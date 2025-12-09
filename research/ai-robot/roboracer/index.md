@@ -10,15 +10,15 @@ title: "RoboRacer (F1TENTH)"
     <!-- Language Tabs -->
     <div class="language-tabs">
       <input type="radio" id="lang-ko" name="language" value="ko" checked>
-      <input type="radio" id="lang-en" name="language" value="en">
       <label for="lang-ko" class="lang-tab">한국어</label>
+      <input type="radio" id="lang-en" name="language" value="en">
       <label for="lang-en" class="lang-tab">English</label>
     </div>
 
     <!-- Content Area -->
     <div id="content-area" class="content-area">
       <!-- Korean Content -->
-      <div id="ko-content" class="lang-content" data-lang="ko" style="display: block;">
+      <div id="ko-content" class="lang-content" data-lang="ko">
         <div class="intro-section">
           <p class="section-text">
             <strong>RoboRacer(F1TENTH)</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>)는 실제 자율주행차의 개발 파이프라인을 축소·정제하여 연구·교육 현장에서 재현할 수 있도록 만든 <strong>표준화된 연구 플랫폼</strong>입니다.
@@ -472,31 +472,3 @@ title: "RoboRacer (F1TENTH)"
   </div>
 </section>
 
-<script>
-// Simple and reliable language switching
-(function() {
-  const langKo = document.getElementById('lang-ko');
-  const langEn = document.getElementById('lang-en');
-  const koContent = document.getElementById('ko-content');
-  const enContent = document.getElementById('en-content');
-
-  function updateContent() {
-    if (langKo && langEn && koContent && enContent) {
-      if (langKo.checked) {
-        koContent.style.display = 'block';
-        enContent.style.display = 'none';
-      } else if (langEn.checked) {
-        enContent.style.display = 'block';
-        koContent.style.display = 'none';
-      }
-    }
-  }
-
-  if (langKo && langEn) {
-    langKo.addEventListener('change', updateContent);
-    langEn.addEventListener('change', updateContent);
-    // Initial state
-    updateContent();
-  }
-})();
-</script>

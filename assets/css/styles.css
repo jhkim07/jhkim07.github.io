@@ -768,6 +768,10 @@ body {
 }
 
 /* ===== LANGUAGE TABS ===== */
+.content-area {
+  min-height: 200px;
+}
+
 .language-tabs {
   display: flex;
   gap: 0.5rem;
@@ -775,7 +779,14 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.lang-tab {
+.language-tabs input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.language-tabs label {
   padding: 0.75rem 1.5rem;
   background: transparent;
   border: none;
@@ -790,29 +801,12 @@ body {
   user-select: none;
 }
 
-.lang-tab:hover {
+.language-tabs label:hover {
   color: var(--text);
   background: rgba(255, 255, 255, 0.02);
 }
 
-.lang-tab.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  background: rgba(255, 204, 51, 0.05);
-}
-
-.content-area {
-  min-height: 200px;
-}
-
-/* Language tabs - CSS only solution */
-.language-tabs input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
+/* Active tab - golden yellow text and underline */
 .language-tabs input[type="radio"]:checked + label {
   color: var(--accent);
   border-bottom-color: var(--accent);
@@ -822,6 +816,26 @@ body {
 /* Hide all content by default */
 .lang-content {
   display: none;
+}
+
+/* Show content based on radio button state - CSS only solution */
+.language-tabs:has(#lang-ko:checked) ~ #content-area #ko-content {
+  display: block;
+}
+
+.language-tabs:has(#lang-en:checked) ~ #content-area #en-content {
+  display: block;
+}
+
+/* Fallback for browsers without :has() support */
+@supports not selector(:has(*)) {
+  #lang-ko:checked ~ .language-tabs ~ #content-area #ko-content {
+    display: block;
+  }
+  
+  #lang-en:checked ~ .language-tabs ~ #content-area #en-content {
+    display: block;
+  }
 }
 
 /* Enhanced design for RoboRacer page */
