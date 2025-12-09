@@ -11,7 +11,7 @@ title: "Home"
       </div>
     </div>
     <div class="hero-text">
-      <p class="tagline">Associate Professor · <a href="https://aix.gnu.ac.kr"> AiX Lab (Former: Cyber Safety) Lab</a> · <a href="https://gnu.ac.kr">Gyeongsang National University</a></p>
+      <p class="tagline">Associate Professor at <a href="https://gnu.ac.kr">Gyeongsang National University</a> · Director of <a href="https://aix.gnu.ac.kr">AiX Lab</a> (Former: Cyber Safety Lab)</p>
       <h1 class="hero-title">Jin Hyun Kim</h1>
       <div class="hero-content">
         <p>
