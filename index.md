@@ -65,14 +65,14 @@ title: "Home"
   <div class="container">
     <h2 class="section-title">Research Interests</h2>
     <div class="pill-list">
-      <span class="pill">Safety and trustworthiness of AI and Large Language Models</span>
-      <span class="pill">Formal verification of CPS</span>
-      <span class="pill">Software verification & validation</span>
+      <span class="pill">Trustworthiness of AI and Large Language Models</span>
+      <span class="pill">Formal Methods</span>
       <span class="pill">Medical AI (Ophthalmology)</span>
       <span class="pill">Autonomous driving & F1TENTH (RoboRacer)</span>
+      <span class="pill">Embodied AI and World Models</span>
     </div>
     <p class="section-text">
-      I aim to develop methods that provide <strong>formal guarantees</strong> for systems
+      I aim to develop methods that provide <strong>formal guarantees</strong> for AI systems
       that directly affect human lives, combining formal methods, data-driven learning,
       and practical engineering.
     </p>
