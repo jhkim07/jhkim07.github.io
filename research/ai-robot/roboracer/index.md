@@ -97,33 +97,43 @@ title: "RoboRacer (F1TENTH)"
           <p class="image-caption">RoboRacer Korea 2023</p>
         </div>
 
-        <h4>(1) Time-Trial Race</h4>
-        <ul class="section-text">
-          <li>최적 경로 생성 및 속도 프로파일의 품질</li>
-          <li>차량 동역학을 이해한 제어 알고리즘 설계 능력</li>
-          <li>SLAM drift 보정 및 안정성</li>
-        </ul>
+        <div class="research-grid">
+          <div class="research-card">
+            <h4 class="research-card-title">(1) Time-Trial Race</h4>
+            <ul class="research-card-list">
+              <li>최적 경로 생성 및 속도 프로파일의 품질</li>
+              <li>차량 동역학을 이해한 제어 알고리즘 설계 능력</li>
+              <li>SLAM drift 보정 및 안정성</li>
+            </ul>
+          </div>
 
-        <h4>(2) Head-to-Head Race</h4>
-        <ul class="section-text">
-          <li>상대 차량의 행동을 고려한 전략적 주행</li>
-          <li>충돌 위험 관리(TTC 기반 안전 판단)</li>
-          <li>게임 이론적 상호작용 모델 연구 가능</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(2) Head-to-Head Race</h4>
+            <ul class="research-card-list">
+              <li>상대 차량의 행동을 고려한 전략적 주행</li>
+              <li>충돌 위험 관리(TTC 기반 안전 판단)</li>
+              <li>게임 이론적 상호작용 모델 연구 가능</li>
+            </ul>
+          </div>
 
-        <h4>(3) Safety & Reliability Challenge</h4>
-        <ul class="section-text">
-          <li>급작스러운 장애물 출현에 대한 긴급 제동(AEB) 성능</li>
-          <li>과도한 속도·회전 각속도에서의 안전 제어 능력</li>
-          <li>오차 누적 환경에서도 시스템이 안전하게 수렴하는지 평가</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(3) Safety & Reliability Challenge</h4>
+            <ul class="research-card-list">
+              <li>급작스러운 장애물 출현에 대한 긴급 제동(AEB) 성능</li>
+              <li>과도한 속도·회전 각속도에서의 안전 제어 능력</li>
+              <li>오차 누적 환경에서도 시스템이 안전하게 수렴하는지 평가</li>
+            </ul>
+          </div>
 
-        <h4>(4) SLAM / Perception Challenge</h4>
-        <ul class="section-text">
-          <li>LiDAR scan 정합 정확도</li>
-          <li>실내·동적 환경에서 Localization의 안정성</li>
-          <li>multi-frame tracking 최적화</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(4) SLAM / Perception Challenge</h4>
+            <ul class="research-card-list">
+              <li>LiDAR scan 정합 정확도</li>
+              <li>실내·동적 환경에서 Localization의 안정성</li>
+              <li>multi-frame tracking 최적화</li>
+            </ul>
+          </div>
+        </div>
 
         <p class="section-text">
           이 대회는 <strong>연구·교육·산업 검증 플랫폼</strong>으로서 기능하며, 국내에서는 <strong>RoboRacer Korea</strong>가 정기 대회를 개최하여 생태계를 확대하고 있습니다.
@@ -136,52 +146,66 @@ title: "RoboRacer (F1TENTH)"
           RoboRacer는 단순한 교육용 키트가 아니라, <strong>최신 AI·로보틱스 연구의 실험 장(實驗場)</strong>으로 널리 사용되고 있습니다.
         </p>
 
-        <h4>(1) 인지(Perception)</h4>
-        <ul class="section-text">
-          <li>LiDAR point cloud segmentation / clustering</li>
-          <li>scan-to-map localization (ICP, NDT, Fast-LIO2 등 경량화 연구 가능)</li>
-          <li>range image 기반 neural perception 연구</li>
-          <li>tracking-by-detection / end-to-end BEV 모델 실험</li>
-        </ul>
+        <div class="research-grid">
+          <div class="research-card">
+            <h4 class="research-card-title">(1) 인지(Perception)</h4>
+            <ul class="research-card-list">
+              <li>LiDAR point cloud segmentation / clustering</li>
+              <li>scan-to-map localization (ICP, NDT, Fast-LIO2 등 경량화 연구 가능)</li>
+              <li>range image 기반 neural perception 연구</li>
+              <li>tracking-by-detection / end-to-end BEV 모델 실험</li>
+            </ul>
+          </div>
 
-        <h4>(2) 경로 계획(Path Planning)</h4>
-        <ul class="section-text">
-          <li>고속 레이싱용 최적 레이싱 라인 생성</li>
-          <li>Frenet Frame 기반 속도–위치 최적화</li>
-          <li>샘플링 기반 플래너(RRT*, Hybrid A*) + smoothing</li>
-          <li>동적 장애물 회피 및 안전한 reachable tube 생성</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(2) 경로 계획(Path Planning)</h4>
+            <ul class="research-card-list">
+              <li>고속 레이싱용 최적 레이싱 라인 생성</li>
+              <li>Frenet Frame 기반 속도–위치 최적화</li>
+              <li>샘플링 기반 플래너(RRT*, Hybrid A*) + smoothing</li>
+              <li>동적 장애물 회피 및 안전한 reachable tube 생성</li>
+            </ul>
+          </div>
 
-        <h4>(3) 제어(Control)</h4>
-        <ul class="section-text">
-          <li>Pure Pursuit, Stanley, PID</li>
-          <li>MPC(MPC-LQR, LMPC, Koopman-based MPC)</li>
-          <li>Vehicle dynamic model identification(마찰계수 추정 등)</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(3) 제어(Control)</h4>
+            <ul class="research-card-list">
+              <li>Pure Pursuit, Stanley, PID</li>
+              <li>MPC(MPC-LQR, LMPC, Koopman-based MPC)</li>
+              <li>Vehicle dynamic model identification(마찰계수 추정 등)</li>
+            </ul>
+          </div>
 
-        <h4>(4) 강화학습(RL)</h4>
-        <ul class="section-text">
-          <li>Off-policy RL(SAC, TD3) 기반 주행 정책 학습</li>
-          <li>On-policy RL(PPO, TRPO) 기반 레이싱 전략</li>
-          <li>Safe RL(Constraint-aware RL, Lagrangian RL, Shielded RL) 적용</li>
-          <li>Sim2Real Gap 감소를 위한 Domain Randomization / adversarial training</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(4) 강화학습(RL)</h4>
+            <ul class="research-card-list">
+              <li>Off-policy RL(SAC, TD3) 기반 주행 정책 학습</li>
+              <li>On-policy RL(PPO, TRPO) 기반 레이싱 전략</li>
+              <li>Safe RL(Constraint-aware RL, Lagrangian RL, Shielded RL) 적용</li>
+              <li>Sim2Real Gap 감소를 위한 Domain Randomization / adversarial training</li>
+            </ul>
+          </div>
 
-        <h4>(5) 안전성 검증(Safety & Formal Methods)</h4>
-        <ul class="section-text">
-          <li>모델체킹 기반 안전성 보증 제어</li>
-          <li>Reachable set 기반 속도 제한 자동 계산</li>
-          <li>보험수리 모델(RSS) 적용 실험</li>
-          <li>Crash-avoidance 성능을 정량화하는 벤치마크 구축</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(5) 안전성 검증(Safety & Formal Methods)</h4>
+            <ul class="research-card-list">
+              <li>모델체킹 기반 안전성 보증 제어</li>
+              <li>Reachable set 기반 속도 제한 자동 계산</li>
+              <li>보험수리 모델(RSS) 적용 실험</li>
+              <li>Crash-avoidance 성능을 정량화하는 벤치마크 구축</li>
+            </ul>
+          </div>
 
-        <h4>(6) 고속 레이싱을 위한 통합 AI</h4>
-        <ul class="section-text">
-          <li>World Model 기반 예측 제어(Dreamer, ViT-based latent dynamics)</li>
-          <li>End-to-End neural control</li>
-          <li>Multi-sensor fusion(LiDAR + IMU + wheel odometry)</li>
-          <li>Self-supervised trajectory prediction</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(6) 고속 레이싱을 위한 통합 AI</h4>
+            <ul class="research-card-list">
+              <li>World Model 기반 예측 제어(Dreamer, ViT-based latent dynamics)</li>
+              <li>End-to-End neural control</li>
+              <li>Multi-sensor fusion(LiDAR + IMU + wheel odometry)</li>
+              <li>Self-supervised trajectory prediction</li>
+            </ul>
+          </div>
+        </div>
 
         <p class="section-text">
           RoboRacer는 <strong>작고 빠른 플랫폼 덕분에 실험 비용이 매우 낮아</strong>, 고위험 시나리오까지 직접 검증할 수 있다는 장점이 있습니다.
@@ -239,7 +263,7 @@ title: "RoboRacer (F1TENTH)"
           <p class="section-text">
             <strong>Related Links:</strong><br>
             • <a href="https://roboracer.or.kr" target="_blank">RoboRacer Korea (roboracer.or.kr)</a><br>
-            • <a href="https://f1tenth.org" target="_blank">F1TENTH Official Website</a>
+            • <a href="https://roboracer.ai" target="_blank"> Roboracer(F1Tenth) Official Website</a>
           </p>
         </div>
       </div>
@@ -323,33 +347,43 @@ title: "RoboRacer (F1TENTH)"
           <p class="image-caption">RoboRacer Korea 2023</p>
         </div>
 
-        <h4>(1) Time-Trial Race</h4>
-        <ul class="section-text">
-          <li>Quality of optimal path generation and speed profiles</li>
-          <li>Ability to design control algorithms that understand vehicle dynamics</li>
-          <li>SLAM drift correction and stability</li>
-        </ul>
+        <div class="research-grid">
+          <div class="research-card">
+            <h4 class="research-card-title">(1) Time-Trial Race</h4>
+            <ul class="research-card-list">
+              <li>Quality of optimal path generation and speed profiles</li>
+              <li>Ability to design control algorithms that understand vehicle dynamics</li>
+              <li>SLAM drift correction and stability</li>
+            </ul>
+          </div>
 
-        <h4>(2) Head-to-Head Race</h4>
-        <ul class="section-text">
-          <li>Strategic driving considering opponent vehicle behavior</li>
-          <li>Collision risk management (TTC-based safety assessment)</li>
-          <li>Research on game-theoretic interaction models</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(2) Head-to-Head Race</h4>
+            <ul class="research-card-list">
+              <li>Strategic driving considering opponent vehicle behavior</li>
+              <li>Collision risk management (TTC-based safety assessment)</li>
+              <li>Research on game-theoretic interaction models</li>
+            </ul>
+          </div>
 
-        <h4>(3) Safety & Reliability Challenge</h4>
-        <ul class="section-text">
-          <li>Emergency braking (AEB) performance for sudden obstacle appearance</li>
-          <li>Safe control capability at excessive speed and angular velocity</li>
-          <li>Evaluation of whether the system safely converges even in error-accumulating environments</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(3) Safety & Reliability Challenge</h4>
+            <ul class="research-card-list">
+              <li>Emergency braking (AEB) performance for sudden obstacle appearance</li>
+              <li>Safe control capability at excessive speed and angular velocity</li>
+              <li>Evaluation of whether the system safely converges even in error-accumulating environments</li>
+            </ul>
+          </div>
 
-        <h4>(4) SLAM / Perception Challenge</h4>
-        <ul class="section-text">
-          <li>LiDAR scan matching accuracy</li>
-          <li>Localization stability in indoor and dynamic environments</li>
-          <li>Multi-frame tracking optimization</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(4) SLAM / Perception Challenge</h4>
+            <ul class="research-card-list">
+              <li>LiDAR scan matching accuracy</li>
+              <li>Localization stability in indoor and dynamic environments</li>
+              <li>Multi-frame tracking optimization</li>
+            </ul>
+          </div>
+        </div>
 
         <p class="section-text">
           These competitions function as a <strong>research, education, and industry verification platform</strong>, and in Korea, <strong>RoboRacer Korea</strong> regularly hosts competitions to expand the ecosystem.
@@ -362,52 +396,66 @@ title: "RoboRacer (F1TENTH)"
           RoboRacer is not a simple educational kit but is widely used as a <strong>testing ground for cutting-edge AI and robotics research</strong>.
         </p>
 
-        <h4>(1) Perception</h4>
-        <ul class="section-text">
-          <li>LiDAR point cloud segmentation / clustering</li>
-          <li>Scan-to-map localization (enables lightweight research such as ICP, NDT, Fast-LIO2)</li>
-          <li>Range image-based neural perception research</li>
-          <li>Tracking-by-detection / end-to-end BEV model experiments</li>
-        </ul>
+        <div class="research-grid">
+          <div class="research-card">
+            <h4 class="research-card-title">(1) Perception</h4>
+            <ul class="research-card-list">
+              <li>LiDAR point cloud segmentation / clustering</li>
+              <li>Scan-to-map localization (enables lightweight research such as ICP, NDT, Fast-LIO2)</li>
+              <li>Range image-based neural perception research</li>
+              <li>Tracking-by-detection / end-to-end BEV model experiments</li>
+            </ul>
+          </div>
 
-        <h4>(2) Path Planning</h4>
-        <ul class="section-text">
-          <li>Optimal racing line generation for high-speed racing</li>
-          <li>Frenet Frame-based speed–position optimization</li>
-          <li>Sampling-based planners (RRT*, Hybrid A*) + smoothing</li>
-          <li>Dynamic obstacle avoidance and safe reachable tube generation</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(2) Path Planning</h4>
+            <ul class="research-card-list">
+              <li>Optimal racing line generation for high-speed racing</li>
+              <li>Frenet Frame-based speed–position optimization</li>
+              <li>Sampling-based planners (RRT*, Hybrid A*) + smoothing</li>
+              <li>Dynamic obstacle avoidance and safe reachable tube generation</li>
+            </ul>
+          </div>
 
-        <h4>(3) Control</h4>
-        <ul class="section-text">
-          <li>Pure Pursuit, Stanley, PID</li>
-          <li>MPC (MPC-LQR, LMPC, Koopman-based MPC)</li>
-          <li>Vehicle dynamic model identification (friction coefficient estimation, etc.)</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(3) Control</h4>
+            <ul class="research-card-list">
+              <li>Pure Pursuit, Stanley, PID</li>
+              <li>MPC (MPC-LQR, LMPC, Koopman-based MPC)</li>
+              <li>Vehicle dynamic model identification (friction coefficient estimation, etc.)</li>
+            </ul>
+          </div>
 
-        <h4>(4) Reinforcement Learning (RL)</h4>
-        <ul class="section-text">
-          <li>Off-policy RL (SAC, TD3)-based driving policy learning</li>
-          <li>On-policy RL (PPO, TRPO)-based racing strategies</li>
-          <li>Safe RL application (Constraint-aware RL, Lagrangian RL, Shielded RL)</li>
-          <li>Domain Randomization / adversarial training for Sim2Real gap reduction</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(4) Reinforcement Learning (RL)</h4>
+            <ul class="research-card-list">
+              <li>Off-policy RL (SAC, TD3)-based driving policy learning</li>
+              <li>On-policy RL (PPO, TRPO)-based racing strategies</li>
+              <li>Safe RL application (Constraint-aware RL, Lagrangian RL, Shielded RL)</li>
+              <li>Domain Randomization / adversarial training for Sim2Real gap reduction</li>
+            </ul>
+          </div>
 
-        <h4>(5) Safety & Formal Methods</h4>
-        <ul class="section-text">
-          <li>Model checking-based safety-guaranteed control</li>
-          <li>Automatic speed limit calculation based on reachable sets</li>
-          <li>Responsibility-sensitive safety (RSS) model application experiments</li>
-          <li>Benchmark construction for quantifying crash-avoidance performance</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(5) Safety & Formal Methods</h4>
+            <ul class="research-card-list">
+              <li>Model checking-based safety-guaranteed control</li>
+              <li>Automatic speed limit calculation based on reachable sets</li>
+              <li>Responsibility-sensitive safety (RSS) model application experiments</li>
+              <li>Benchmark construction for quantifying crash-avoidance performance</li>
+            </ul>
+          </div>
 
-        <h4>(6) Integrated AI for High-Speed Racing</h4>
-        <ul class="section-text">
-          <li>World Model-based predictive control (Dreamer, ViT-based latent dynamics)</li>
-          <li>End-to-End neural control</li>
-          <li>Multi-sensor fusion (LiDAR + IMU + wheel odometry)</li>
-          <li>Self-supervised trajectory prediction</li>
-        </ul>
+          <div class="research-card">
+            <h4 class="research-card-title">(6) Integrated AI for High-Speed Racing</h4>
+            <ul class="research-card-list">
+              <li>World Model-based predictive control (Dreamer, ViT-based latent dynamics)</li>
+              <li>End-to-End neural control</li>
+              <li>Multi-sensor fusion (LiDAR + IMU + wheel odometry)</li>
+              <li>Self-supervised trajectory prediction</li>
+            </ul>
+          </div>
+        </div>
 
         <p class="section-text">
           RoboRacer has the advantage that <strong>experimental costs are very low due to its small and fast platform</strong>, allowing direct verification of even high-risk scenarios.
@@ -464,7 +512,7 @@ title: "RoboRacer (F1TENTH)"
           <p class="section-text">
             <strong>Related Links:</strong><br>
             • <a href="https://roboracer.or.kr" target="_blank">RoboRacer Korea (roboracer.or.kr)</a><br>
-            • <a href="https://f1tenth.org" target="_blank">F1TENTH Official Website</a>
+            • <a href="https://roboracer.ai" target="_blank"> Roboracer(F1Tenth) Official Website</a>
           </p>
         </div>
       </div>
