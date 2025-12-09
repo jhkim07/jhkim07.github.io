@@ -20,7 +20,7 @@ title: "Home"
         <p>
           I am an <strong>associate professor</strong> in the Department of AI Information Engineering
           at <strong>Gyeongsang National University</strong>, where I serve as the <strong>Director of <a href="https://aix.gnu.ac.kr">AiX Lab</a></strong> 
-          and the <strong>Chairman of <a href="{{ '/classes/roboracer' | relative_url }}">RoboRacer</a></strong>. 
+          and the <strong>Chairman of <a href="https://roboracer.or.kr">RoboRacer</a></strong>. 
           I completed my postdoctoral research under the supervision of <strong>Professor Insup Lee</strong> at the University of Pennsylvania.
         </p>
 
