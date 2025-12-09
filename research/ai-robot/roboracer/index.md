@@ -9,14 +9,16 @@ title: "RoboRacer (F1TENTH)"
 
     <!-- Language Tabs -->
     <div class="language-tabs">
-      <button class="lang-tab active" data-lang="ko">한국어</button>
-      <button class="lang-tab" data-lang="en">English</button>
+      <input type="radio" id="lang-ko" name="language" value="ko" checked style="display: none;">
+      <input type="radio" id="lang-en" name="language" value="en" style="display: none;">
+      <label for="lang-ko" class="lang-tab active">한국어</label>
+      <label for="lang-en" class="lang-tab">English</label>
     </div>
 
     <!-- Content Area -->
     <div id="content-area" class="content-area">
       <!-- Korean Content -->
-      <div id="ko-content" class="lang-content active">
+      <div id="ko-content" class="lang-content" data-lang="ko" style="display: block;">
         <p class="section-text">
           <strong>RoboRacer</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>)는 1/10 크기의 고성능 자율주행 레이싱 플랫폼으로,
           실제 자동차와 동일한 <strong>센서–계산–제어 파이프라인</strong>을 축소한 형태로 구현한 연구·교육용 오픈 플랫폼입니다.
@@ -259,7 +261,7 @@ title: "RoboRacer (F1TENTH)"
       </div>
       
       <!-- English Content -->
-      <div id="en-content" class="lang-content">
+      <div id="en-content" class="lang-content" data-lang="en" style="display: none;">
         <p class="section-text">
           <strong>RoboRacer</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>) is a high-performance 1/10-scale autonomous racing platform that implements a scaled-down version of the same <strong>sensor–computation–control pipeline</strong> as real vehicles, designed as an open platform for research and education.
         </p>
@@ -504,30 +506,47 @@ title: "RoboRacer (F1TENTH)"
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const langTabs = document.querySelectorAll('.lang-tab');
-  const koContent = document.getElementById('ko-content');
-  const enContent = document.getElementById('en-content');
+(function() {
+  function updateLanguageTabs() {
+    const langKo = document.getElementById('lang-ko');
+    const langEn = document.getElementById('lang-en');
+    const koContent = document.getElementById('ko-content');
+    const enContent = document.getElementById('en-content');
+    const koLabel = document.querySelector('label[for="lang-ko"]');
+    const enLabel = document.querySelector('label[for="lang-en"]');
 
-  // Tab click handler
-  langTabs.forEach(tab => {
-    tab.addEventListener('click', function(e) {
-      e.preventDefault();
-      const lang = this.getAttribute('data-lang');
-      
-      // Update active tab
-      langTabs.forEach(t => t.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Show/hide content using classList for better CSS control
-      if (lang === 'ko') {
-        koContent.classList.add('active');
-        enContent.classList.remove('active');
-      } else if (lang === 'en') {
-        enContent.classList.add('active');
-        koContent.classList.remove('active');
+    if (!langKo || !langEn || !koContent || !enContent) {
+      console.error('Language elements not found');
+      return;
+    }
+
+    function updateDisplay() {
+      if (langKo.checked) {
+        koContent.style.display = 'block';
+        enContent.style.display = 'none';
+        if (koLabel) koLabel.classList.add('active');
+        if (enLabel) enLabel.classList.remove('active');
+      } else if (langEn.checked) {
+        enContent.style.display = 'block';
+        koContent.style.display = 'none';
+        if (enLabel) enLabel.classList.add('active');
+        if (koLabel) koLabel.classList.remove('active');
       }
-    });
-  });
-});
+    }
+
+    // Add event listeners
+    langKo.addEventListener('change', updateDisplay);
+    langEn.addEventListener('change', updateDisplay);
+    
+    // Initial update
+    updateDisplay();
+  }
+
+  // Run when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateLanguageTabs);
+  } else {
+    updateLanguageTabs();
+  }
+})();
 </script>

@@ -786,6 +786,8 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: var(--font-main);
+  display: inline-block;
+  user-select: none;
 }
 
 .lang-tab:hover {
@@ -805,10 +807,6 @@ body {
 
 .lang-content {
   display: none;
-}
-
-.lang-content.active {
-  display: block;
 }
 
 /* ===== SIDEBAR NAVIGATION ===== */
