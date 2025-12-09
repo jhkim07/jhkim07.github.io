@@ -19,16 +19,18 @@ title: "Home"
       <div class="hero-content">
         <p>
           I am an <strong>associate professor</strong> in the Department of AI Information Engineering
-          at <strong>Gyeongsang National University</strong>. I completed my postdoctoral research
-          under the supervision of <strong>Professor Insup Lee</strong> at the University of Pennsylvania.
+          at <strong>Gyeongsang National University</strong>, where I serve as the <strong>Director of <a href="https://aix.gnu.ac.kr">AiX Lab</a></strong> 
+          and the <strong>Chairman of <a href="{{ '/classes/roboracer' | relative_url }}">RoboRacer</a></strong>. 
+          I completed my postdoctoral research under the supervision of <strong>Professor Insup Lee</strong> at the University of Pennsylvania.
         </p>
 
         <p>
-          My research interests include <strong>software verification and validation</strong>, especially for
-          <strong>cyber-physical systems (CPS)</strong>, and the <strong>safety and trustworthiness of AI</strong>
-          in domains such as medical AI and autonomous driving. I recently developed
-          <strong>Ophtimus</strong> (Ophthalmological Small Language Models), a domain-specialized ophthalmology LLM
-          designed to support reliable clinical decision-making
+          My research interests span <strong>Formal Methods</strong>, <strong>AI Safety</strong>, 
+          <strong>Medical LLM</strong>, and <strong>Robot Racing</strong>. I focus on developing 
+          <strong>formal verification and validation</strong> techniques for <strong>cyber-physical systems (CPS)</strong>, 
+          and advancing the <strong>safety and trustworthiness of AI</strong> in critical domains such as medical AI 
+          and autonomous driving. I recently developed <strong>Ophtimus</strong> (Ophthalmological Small Language Models), 
+          a domain-specialized ophthalmology LLM designed to support reliable clinical decision-making
           (<a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank">GitHub</a>).
         </p>
 
