@@ -84,10 +84,10 @@ title: "Biography"
         <div class="timeline-item timeline-item-current">
           <div class="timeline-marker timeline-marker-professor"></div>
           <div class="timeline-content">
-            <div class="timeline-year">2023–</div>
+            <div class="timeline-year">2022–2024</div>
             <h4 class="timeline-position">Head of Center</h4>
             <p class="timeline-institution">LINC 3.0 AI·BigData ICC (GNU)</p>
-            <span class="timeline-badge badge-current">Current</span>
+            <span class="timeline-badge badge-location">🇰🇷 South Korea</span>
           </div>
         </div>
 
