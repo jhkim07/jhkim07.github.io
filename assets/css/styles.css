@@ -805,8 +805,64 @@ body {
   min-height: 200px;
 }
 
+/* Language tabs - CSS only solution */
+.language-tabs input[type="radio"] {
+  display: none;
+}
+
+.language-tabs input[type="radio"]:checked + label {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: rgba(255, 204, 51, 0.05);
+}
+
+/* Hide all content by default */
 .lang-content {
   display: none;
+}
+
+/* Show Korean content when lang-ko is checked */
+#lang-ko:checked ~ * #ko-content,
+#lang-ko:checked ~ .content-area #ko-content {
+  display: block;
+}
+
+/* Show English content when lang-en is checked */
+#lang-en:checked ~ * #en-content,
+#lang-en:checked ~ .content-area #en-content {
+  display: block;
+}
+
+/* Alternative: Use sibling selector if the above doesn't work */
+.language-tabs:has(#lang-ko:checked) ~ .content-area #ko-content {
+  display: block;
+}
+
+.language-tabs:has(#lang-en:checked) ~ .content-area #en-content {
+  display: block;
+}
+
+/* Fallback: Use general sibling selector */
+#lang-ko:checked ~ .content-area #ko-content,
+#lang-en:checked ~ .content-area #en-content {
+  display: block;
+}
+
+/* More specific fallback */
+body:has(#lang-ko:checked) #ko-content {
+  display: block !important;
+}
+
+body:has(#lang-en:checked) #en-content {
+  display: block !important;
+}
+
+body:has(#lang-ko:checked) #en-content {
+  display: none !important;
+}
+
+body:has(#lang-en:checked) #ko-content {
+  display: none !important;
 }
 
 /* ===== SIDEBAR NAVIGATION ===== */

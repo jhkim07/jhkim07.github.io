@@ -9,14 +9,16 @@ title: "RoboRacer (F1TENTH)"
 
     <!-- Language Tabs -->
     <div class="language-tabs">
-      <button type="button" class="lang-tab active" data-lang="ko">한국어</button>
-      <button type="button" class="lang-tab" data-lang="en">English</button>
+      <input type="radio" id="lang-ko" name="language" value="ko" checked>
+      <input type="radio" id="lang-en" name="language" value="en">
+      <label for="lang-ko" class="lang-tab">한국어</label>
+      <label for="lang-en" class="lang-tab">English</label>
     </div>
 
     <!-- Content Area -->
     <div id="content-area" class="content-area">
       <!-- Korean Content -->
-      <div id="ko-content" class="lang-content" data-lang="ko" style="display: block !important;">
+      <div id="ko-content" class="lang-content" data-lang="ko">
         <p class="section-text">
           <strong>RoboRacer</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>)는 1/10 크기의 고성능 자율주행 레이싱 플랫폼으로,
           실제 자동차와 동일한 <strong>센서–계산–제어 파이프라인</strong>을 축소한 형태로 구현한 연구·교육용 오픈 플랫폼입니다.
@@ -259,7 +261,7 @@ title: "RoboRacer (F1TENTH)"
       </div>
       
       <!-- English Content -->
-      <div id="en-content" class="lang-content" data-lang="en" style="display: none !important;">
+      <div id="en-content" class="lang-content" data-lang="en">
         <p class="section-text">
           <strong>RoboRacer</strong> (<a href="https://roboracer.or.kr" target="_blank">roboracer.or.kr</a>) is a high-performance 1/10-scale autonomous racing platform that implements a scaled-down version of the same <strong>sensor–computation–control pipeline</strong> as real vehicles, designed as an open platform for research and education.
         </p>
@@ -504,54 +506,32 @@ title: "RoboRacer (F1TENTH)"
 </section>
 
 <script>
+// Simple and reliable language switching
 (function() {
-  function initLanguageTabs() {
-    const langTabs = document.querySelectorAll('.lang-tab');
-    const koContent = document.getElementById('ko-content');
-    const enContent = document.getElementById('en-content');
+  const langKo = document.getElementById('lang-ko');
+  const langEn = document.getElementById('lang-en');
+  const koContent = document.getElementById('ko-content');
+  const enContent = document.getElementById('en-content');
 
-    console.log('Initializing language tabs...');
-    console.log('langTabs:', langTabs.length);
-    console.log('koContent:', koContent);
-    console.log('enContent:', enContent);
-
-    if (!langTabs.length || !koContent || !enContent) {
-      console.error('Language elements not found');
-      return;
+  function updateContent() {
+    if (langKo && langEn && koContent && enContent) {
+      if (langKo.checked) {
+        koContent.style.display = 'block';
+        enContent.style.display = 'none';
+      } else if (langEn.checked) {
+        enContent.style.display = 'block';
+        koContent.style.display = 'none';
+      }
     }
-
-    langTabs.forEach(function(tab) {
-      tab.addEventListener('click', function(e) {
-        e.preventDefault();
-        const lang = this.getAttribute('data-lang');
-        console.log('Tab clicked, lang:', lang);
-
-        // Update active tab
-        langTabs.forEach(function(t) {
-          t.classList.remove('active');
-        });
-        this.classList.add('active');
-
-        // Show/hide content
-        if (lang === 'ko') {
-          koContent.style.cssText = 'display: block !important;';
-          enContent.style.cssText = 'display: none !important;';
-          console.log('Showing Korean content');
-        } else if (lang === 'en') {
-          enContent.style.cssText = 'display: block !important;';
-          koContent.style.cssText = 'display: none !important;';
-          console.log('Showing English content');
-        }
-      });
-    });
   }
 
-  // Run when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLanguageTabs);
-  } else {
-    initLanguageTabs();
+  if (langKo && langEn) {
+    langKo.addEventListener('change', updateContent);
+    langEn.addEventListener('change', updateContent);
+    // Initial state
+    updateContent();
   }
 })();
 </script>
+
 
