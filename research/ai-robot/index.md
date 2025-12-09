@@ -18,7 +18,10 @@ title: "AI Robot Projects"
         <nav>
           <ul class="sidebar-menu">
             <li class="sidebar-menu-item">
-              <a href="#robot-racing" class="sidebar-menu-link active" data-section="robot-racing">RoboRacer (F1Tenth)</a>
+              <a href="#overview" class="sidebar-menu-link" data-section="overview">Overview</a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#robot-racing" class="sidebar-menu-link" data-section="robot-racing">RoboRacer (F1Tenth)</a>
             </li>
             <li class="sidebar-menu-item">
               <a href="#rl-racing-optimization" class="sidebar-menu-link" data-section="rl-racing-optimization">RL Racing Optimization</a>
@@ -29,8 +32,32 @@ title: "AI Robot Projects"
 
       <!-- 우측 콘텐츠 영역 -->
       <div class="research-content">
+        <!-- Overview 섹션 (기본 표시) -->
+        <div id="overview" class="research-content-section active">
+          <!-- Language Tabs -->
+          <div class="language-tabs">
+            <input type="radio" id="overview-lang-ko" name="overview-language" value="ko" checked>
+            <label for="overview-lang-ko" class="lang-tab">한국어</label>
+            <input type="radio" id="overview-lang-en" name="overview-language" value="en">
+            <label for="overview-lang-en" class="lang-tab">English</label>
+          </div>
+
+          <!-- Content Area -->
+          <div id="overview-content-area" class="content-area">
+            <!-- Korean Content -->
+            <div id="overview-ko-content" class="lang-content" data-lang="ko" style="display: block;">
+              {% include_relative overview-ko.md %}
+            </div>
+            
+            <!-- English Content -->
+            <div id="overview-en-content" class="lang-content" data-lang="en" style="display: none;">
+              {% include_relative overview-en.md %}
+            </div>
+          </div>
+        </div>
+
         <!-- RoboRacer 섹션 - 동적으로 로드됨 -->
-        <div id="robot-racing" class="research-content-section active">
+        <div id="robot-racing" class="research-content-section">
           <div class="loading-placeholder" style="text-align: center; padding: 2rem; color: var(--muted);">
             <p>Loading RoboRacer content...</p>
           </div>
@@ -110,8 +137,8 @@ document.addEventListener('DOMContentLoaded', function() {
           loadContent('robot-racing', roboracerUrl);
         }
         
-        // Scroll to top of content area
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Don't scroll - let CSS handle the alignment
+        // This prevents the sidebar from moving
       }
     });
   });
@@ -120,22 +147,35 @@ document.addEventListener('DOMContentLoaded', function() {
   const hash = window.location.hash;
   if (hash) {
     const sectionId = hash.replace('#', '');
-    if (sectionId === 'robot-racing' || sectionId === 'rl-racing-optimization') {
-      const link = document.querySelector(`[data-section="${sectionId}"]`);
-      if (link) {
-        link.click();
-      }
+    const link = document.querySelector(`[data-section="${sectionId}"]`);
+    if (link) {
+      link.click();
     }
   } else {
-    // 기본적으로 robot-racing 섹션이 활성화되어 있으면 콘텐츠 로드
-    const robotRacingSection = document.getElementById('robot-racing');
-    if (robotRacingSection && robotRacingSection.classList.contains('active')) {
-      // 현재 페이지 경로를 기준으로 상대 경로 계산
-      const currentPath = window.location.pathname;
-      const basePath = currentPath.substring(0, currentPath.lastIndexOf('/'));
-      const roboracerUrl = basePath + '/roboracer/';
-      loadContent('robot-racing', roboracerUrl);
+    // If no hash, show overview section by default
+    // Activate overview menu link
+    const overviewLink = document.querySelector('[data-section="overview"]');
+    if (overviewLink) {
+      overviewLink.classList.add('active');
     }
+    // The overview section already has 'active' class in HTML
   }
+
+  // Language tab switching for Overview section
+  const overviewLangRadios = document.querySelectorAll('input[name="overview-language"]');
+  const overviewKoContent = document.getElementById('overview-ko-content');
+  const overviewEnContent = document.getElementById('overview-en-content');
+
+  overviewLangRadios.forEach(radio => {
+    radio.addEventListener('change', function() {
+      if (this.value === 'ko') {
+        overviewKoContent.style.display = 'block';
+        overviewEnContent.style.display = 'none';
+      } else if (this.value === 'en') {
+        overviewKoContent.style.display = 'none';
+        overviewEnContent.style.display = 'block';
+      }
+    });
+  });
 });
 </script>

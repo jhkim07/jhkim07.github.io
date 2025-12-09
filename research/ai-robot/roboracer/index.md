@@ -5,7 +5,6 @@ title: "RoboRacer (F1TENTH)"
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">RoboRacer (F1TENTH)</h2>
 
     <!-- Language Tabs -->
     <div class="language-tabs">
@@ -14,7 +13,7 @@ title: "RoboRacer (F1TENTH)"
       <input type="radio" id="lang-en" name="language" value="en">
       <label for="lang-en" class="lang-tab">English</label>
     </div>
-
+    <h2 class="section-title">RoboRacer (F1TENTH)</h2>
     <!-- Content Area -->
     <div id="content-area" class="content-area">
       <!-- Korean Content -->
