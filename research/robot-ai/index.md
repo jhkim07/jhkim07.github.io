@@ -5,7 +5,7 @@ title: "AI Robot Projects"
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">AI Robot Projects</h2>
+    <h2 class="section-title">AI Robot Research</h2>
 
     <div class="research-layout">
       <!-- 좌측 사이드바 메뉴 -->
