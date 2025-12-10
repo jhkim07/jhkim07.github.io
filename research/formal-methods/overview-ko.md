@@ -1,5 +1,5 @@
 <!-- Title -->
-<h2 class="section-title">AIx Lab – Formal Methods Research Themes</h2>
+<h2 class="section-title">AiX Lab – Formal Methods Research Themes</h2>
 <p class="section-subtitle">
   Verified Environment + Verified Learning 기반의 안전한 지능형 시스템 구축
 </p>
