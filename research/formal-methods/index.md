@@ -18,13 +18,13 @@ title: "Formal Methods Projects"
         <nav>
           <ul class="sidebar-menu">
             <li class="sidebar-menu-item">
-              <a href="#uppaal2go" class="sidebar-menu-link active" data-section="uppaal2go">Uppaal2Go</a>
+              <a href="#from-uppaal-to-go" class="sidebar-menu-link" data-section="from-uppaal-to-go" data-page="/research/formal-methods/from-uppaal-to-go">From Uppaal to Go</a>
             </li>
             <li class="sidebar-menu-item">
-              <a href="#tada" class="sidebar-menu-link" data-section="tada">TADA</a>
+              <a href="#tada" class="sidebar-menu-link" data-section="tada" data-page="/research/formal-methods/tada">Timed Automata with Disjoint Actions</a>
             </li>
             <li class="sidebar-menu-item">
-              <a href="#uppaal" class="sidebar-menu-link" data-section="uppaal">Uppaal</a>
+              <a href="#uppaal" class="sidebar-menu-link" data-section="uppaal" data-page="/research/formal-methods/uppaal">Uppaal</a>
             </li>
           </ul>
         </nav>
@@ -32,28 +32,25 @@ title: "Formal Methods Projects"
 
       <!-- 우측 콘텐츠 영역 -->
       <div class="research-content">
-        <!-- Uppaal2Go 섹션 -->
-        <div id="uppaal2go" class="research-content-section active">
-          <h3>Uppaal2Go</h3>
-          <p class="section-text">
-            <em>To be Updated</em>
-          </p>
+        <!-- From Uppaal to Go 섹션 -->
+        <div id="from-uppaal-to-go" class="research-content-section">
+          <div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--muted);">
+            Loading...
+          </div>
         </div>
 
         <!-- TADA 섹션 -->
         <div id="tada" class="research-content-section">
-          <h3>TADA</h3>
-          <p class="section-text">
-            <em>To be Updated</em>
-          </p>
+          <div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--muted);">
+            Loading...
+          </div>
         </div>
 
         <!-- Uppaal 섹션 -->
-        <div id="uppaal" class="research-content-section">
-          <h3>Uppaal</h3>
-          <p class="section-text">
-            <em>To be Updated</em>
-          </p>
+        <div id="uppaal" class="research-content-section active">
+          <div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--muted);">
+            Loading...
+          </div>
         </div>
       </div>
     </div>
@@ -64,24 +61,68 @@ title: "Formal Methods Projects"
 document.addEventListener('DOMContentLoaded', function() {
   const menuLinks = document.querySelectorAll('.sidebar-menu-link');
   const contentSections = document.querySelectorAll('.research-content-section');
+  const loadedPages = new Set(); // Track which pages have been loaded
+
+  // Function to load external page content
+  async function loadPageContent(sectionId, pageUrl) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    // If already loaded, just show it
+    if (loadedPages.has(sectionId)) {
+      return;
+    }
+
+    try {
+      const response = await fetch(pageUrl);
+      if (!response.ok) throw new Error('Failed to load page');
+      
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      
+      // Find the main content section
+      const contentSection = doc.querySelector('.research-result');
+      if (contentSection) {
+        section.innerHTML = contentSection.innerHTML;
+        loadedPages.add(sectionId);
+      } else {
+        section.innerHTML = '<p style="color: var(--muted);">Content not found.</p>';
+      }
+    } catch (error) {
+      console.error('Error loading page:', error);
+      section.innerHTML = '<p style="color: var(--muted);">Failed to load content.</p>';
+    }
+  }
 
   menuLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
       const targetSection = this.getAttribute('data-section');
+      const pageUrl = this.getAttribute('data-page');
       
-      // Remove active class from all links and sections
-      menuLinks.forEach(l => l.classList.remove('active'));
-      contentSections.forEach(s => s.classList.remove('active'));
-      
-      // Add active class to clicked link and corresponding section
-      this.classList.add('active');
-      const section = document.getElementById(targetSection);
-      if (section) {
-        section.classList.add('active');
-        // Scroll to top of content area
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (targetSection) {
+        e.preventDefault();
+        
+        // Remove active class from all links and sections
+        menuLinks.forEach(l => l.classList.remove('active'));
+        contentSections.forEach(s => s.classList.remove('active'));
+        
+        // Add active class to clicked link and corresponding section
+        this.classList.add('active');
+        const section = document.getElementById(targetSection);
+        const contentArea = document.querySelector('.research-content');
+        
+        if (section && contentArea) {
+          section.classList.add('active');
+          
+          // Load external page content if needed
+          if (pageUrl && !loadedPages.has(targetSection)) {
+            loadPageContent(targetSection, pageUrl);
+          }
+          
+          // Don't scroll - just show the content
+          // The menu stays fixed and only content changes
+        }
       }
     });
   });
@@ -90,11 +131,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const hash = window.location.hash;
   if (hash) {
     const sectionId = hash.replace('#', '');
-    if (sectionId === 'uppaal2go' || sectionId === 'tada' || sectionId === 'uppaal') {
-      const link = document.querySelector(`[data-section="${sectionId}"]`);
-      if (link) {
-        link.click();
-      }
+    const link = document.querySelector(`[data-section="${sectionId}"]`);
+    if (link) {
+      link.click();
+    }
+  } else {
+    // Load default section (Uppaal) on initial page load
+    const defaultLink = document.querySelector('[data-section="uppaal"]');
+    if (defaultLink) {
+      defaultLink.click();
     }
   }
 });
