@@ -18,6 +18,9 @@ title: "Formal Methods Projects"
         <nav>
           <ul class="sidebar-menu">
             <li class="sidebar-menu-item">
+              <a href="#overview" class="sidebar-menu-link active" data-section="overview">Overview</a>
+            </li>
+            <li class="sidebar-menu-item">
               <a href="#from-uppaal-to-go" class="sidebar-menu-link" data-section="from-uppaal-to-go" data-page="/research/formal-methods/from-uppaal-to-go">From Uppaal to Go</a>
             </li>
             <li class="sidebar-menu-item">
@@ -32,6 +35,30 @@ title: "Formal Methods Projects"
 
       <!-- 우측 콘텐츠 영역 -->
       <div class="research-content">
+        <!-- Overview 섹션 (기본 표시) -->
+        <div id="overview" class="research-content-section active">
+          <!-- Language Tabs -->
+          <div class="language-tabs">
+            <input type="radio" id="overview-lang-ko" name="overview-language" value="ko" checked>
+            <label for="overview-lang-ko" class="lang-tab">한국어</label>
+            <input type="radio" id="overview-lang-en" name="overview-language" value="en">
+            <label for="overview-lang-en" class="lang-tab">English</label>
+          </div>
+
+          <!-- Content Area -->
+          <div id="overview-content-area" class="content-area">
+            <!-- Korean Content -->
+            <div id="overview-ko-content" class="lang-content" data-lang="ko" style="display: block;">
+              {% include_relative overview-ko.md %}
+            </div>
+            
+            <!-- English Content -->
+            <div id="overview-en-content" class="lang-content" data-lang="en" style="display: none;">
+              {% include_relative overview-en.md %}
+            </div>
+          </div>
+        </div>
+
         <!-- From Uppaal to Go 섹션 -->
         <div id="from-uppaal-to-go" class="research-content-section">
           <div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--muted);">
@@ -47,7 +74,7 @@ title: "Formal Methods Projects"
         </div>
 
         <!-- Uppaal 섹션 -->
-        <div id="uppaal" class="research-content-section active">
+        <div id="uppaal" class="research-content-section">
           <div class="loading-indicator" style="text-align: center; padding: 2rem; color: var(--muted);">
             Loading...
           </div>
@@ -136,11 +163,30 @@ document.addEventListener('DOMContentLoaded', function() {
       link.click();
     }
   } else {
-    // Load default section (Uppaal) on initial page load
-    const defaultLink = document.querySelector('[data-section="uppaal"]');
-    if (defaultLink) {
-      defaultLink.click();
+    // If no hash, show overview section by default
+    // Activate overview menu link
+    const overviewLink = document.querySelector('[data-section="overview"]');
+    if (overviewLink) {
+      overviewLink.classList.add('active');
     }
+    // The overview section already has 'active' class in HTML
   }
+
+  // Language tab switching for Overview section
+  const overviewLangRadios = document.querySelectorAll('input[name="overview-language"]');
+  const overviewKoContent = document.getElementById('overview-ko-content');
+  const overviewEnContent = document.getElementById('overview-en-content');
+
+  overviewLangRadios.forEach(radio => {
+    radio.addEventListener('change', function() {
+      if (this.value === 'ko') {
+        overviewKoContent.style.display = 'block';
+        overviewEnContent.style.display = 'none';
+      } else if (this.value === 'en') {
+        overviewKoContent.style.display = 'none';
+        overviewEnContent.style.display = 'block';
+      }
+    });
+  });
 });
 </script>
