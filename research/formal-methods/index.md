@@ -5,7 +5,7 @@ title: "Formal Methods Projects"
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Formal Methods of CPS</h2>
+    <h2 class="section-title">Formal Methods for AI and CPS</h2>
     <p class="section-text">
       This page covers projects on <strong>formal methods</strong> of
       <strong>cyber-physical systems (CPS)</strong>, including timing,
