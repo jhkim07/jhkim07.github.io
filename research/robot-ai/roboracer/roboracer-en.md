@@ -18,7 +18,7 @@
 </div>
 
 <div class="image-container">
-  <img src="{{ '/research/ai-robot/roboracer/f1tenth.png' | relative_url }}" alt="F1TENTH RoboRacer Platform" class="content-image">
+  <img src="{{ '/research/robot-ai/roboracer/f1tenth.png' | relative_url }}" alt="F1TENTH RoboRacer Platform" class="content-image">
   <p class="image-caption">F1TENTH RoboRacer Platform</p>
 </div>
 
@@ -56,7 +56,7 @@
 </ul>
 
 <div class="image-container full-width">
-  <img src="{{ '/research/ai-robot/roboracer/RoboRacer_env.png' | relative_url }}" alt="RoboRacer Environment" class="content-image">
+  <img src="{{ '/research/robot-ai/roboracer/RoboRacer_env.png' | relative_url }}" alt="RoboRacer Environment" class="content-image">
   <p class="image-caption">RoboRacer Racing Environment</p>
 </div>
 
@@ -71,7 +71,7 @@
 </p>
 
 <div class="image-container">
-  <img src="{{ '/research/ai-robot/roboracer/roboracer_korea_2023.jpg' | relative_url }}" alt="RoboRacer Korea 2023" class="content-image">
+  <img src="{{ '/research/robot-ai/roboracer/roboracer_korea_2023.jpg' | relative_url }}" alt="RoboRacer Korea 2023" class="content-image">
   <p class="image-caption">RoboRacer Korea 2023</p>
 </div>
 
