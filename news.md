@@ -14,29 +14,29 @@ title: "Home"
       <li>
         <strong>Soomin Cho, Inhye Kang, and Jin Hyun Kim</strong>.  
         <em>"From timed automata to go: Formally verified code generation and runtime monitoring for cyber-physical systems."</em>  
-        <strong>IEEE Access</strong>, 2025.  
-        <span class="pill">Accepted</span>
+        <strong>IEEE Access</strong>, 13:161729–161749, 2025.  
+        doi: 10.1109/ACCESS.2025.3608215. <a href="https://ieeexplore.ieee.org/document/11155038" target="_blank">[PDF]</a>
       </li>
 
       <li>
-        <strong>Jin Hyun Kim et al.</strong>  
-        <em>"Low-cost and fast epiretinal membrane detection and quantification based on SD-OCT."</em>  
-        <strong>IEEE Access</strong>, 2025.  
-        <span class="pill">Accepted</span>
+        <strong>S. Baek, I. Lee, K. Jin Jang, Y. Han, and J. H. Kim</strong>.  
+        <em>"Low-Cost and Fast Epiretinal Membrane Detection and Quantification Based on SD-OCT."</em>  
+        <strong>IEEE Access</strong>, vol. 13, pp. 196887-196901, 2025.  
+        doi: 10.1109/ACCESS.2025.3629332. <a href="https://ieeexplore.ieee.org/document/11226998" target="_blank">[PDF]</a>
       </li>
 
       <li>
-        <strong>Jin Hyun Kim et al.</strong>  
+        <strong>H. Yoon, E. Jo, S. Ryu, J.-I. Yoo, M. Kim, and J. H. Kim</strong>.  
         <em>"Noise-robust markerless video gait anomaly detection via two-stage acquisition and LSTM autoencoders."</em>  
-        <strong>Scientific Reports</strong>, 2025.  
-        <span class="pill">Accepted</span>
+        <strong>Scientific Reports</strong>, 15, 42074, 2025.  
+        doi: 10.1038/s41598-025-26169-9. <a href="https://www.nature.com/articles/s41598-025-26169-9#citeas" target="_blank">[PDF]</a>
       </li>
 
       <li>
-        <strong>Jin Hyun Kim et al.</strong>  
-        <em>"Ophtimus-V2-Tx: A compact domain-specific LLM for ophthalmic diagnosis and treatment planning."</em>  
-        <strong>Scientific Reports</strong>, 2025.  
-        <span class="pill">Accepted</span>
+        <strong>M. Kwon, K. J. Jang, S. J. Baek, Y. S. Han, H. Choi, I. Lee, and J. H. Kim</strong>.  
+        <em>"Ophtimus-V2-Tx: a compact domain-specific LLM for ophthalmic diagnosis and treatment planning."</em>  
+        <strong>Scientific Reports</strong>, 15, 43532, 2025.  
+        doi: 10.1038/s41598-025-27410-1. <a href="https://www.nature.com/articles/s41598-025-27410-1#citeas" target="_blank">[PDF]</a>
       </li>
     </ul>
 

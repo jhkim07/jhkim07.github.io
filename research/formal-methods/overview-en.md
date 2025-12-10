@@ -1,5 +1,5 @@
 <!-- Title -->
-<h2 class="section-title">AIx Lab – Formal Methods Research Themes</h2>
+<h2 class="section-title">AiX Lab – Formal Methods Research Themes</h2>
 <p class="section-subtitle">
   Building Safe Intelligent Systems based on Verified Environment + Verified Learning
 </p>
