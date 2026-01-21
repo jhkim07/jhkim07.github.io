@@ -72,6 +72,5 @@ title: "Patents"
   PCT Application No. PCT/KR2023/020600.  
   Status: Published.
 
-
-  </div>
+</div>
 </section>

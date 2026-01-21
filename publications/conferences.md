@@ -121,7 +121,7 @@ title: "International Conferences"
 
 ## 2000
 - Young-Ho Kim, **Jin Hyun Kim**, Ji-Young Kim, Jee-In Kim, Jin-Young Choi, and Chang Woo Pyo.  
-  “A visual component based tool for developing embedded application software.”  
+  "A visual component based tool for developing embedded application software."  
   In Proceedings of the International Conference on Human-Computer Interaction, pages 180–184, 2000.
 
   </div>
