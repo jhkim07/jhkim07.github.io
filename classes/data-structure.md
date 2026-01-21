@@ -15,9 +15,8 @@ fundamental data structures and algorithms that enable efficient
 computation. This course follows the *2025 Data Structure Syllabus*,  
 covering algorithm analysis, linear and non-linear structures,  
 recursion, graph basics, sorting, and searching.  
-:contentReference[oaicite:1]{index=1}
 
-**Full weekly schedule (Syllabus)**: <a herf="https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing"> Here </a>
+**Full weekly schedule (Syllabus)**: <a href="https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing"> Here </a>
 
 ---
 
@@ -75,8 +74,6 @@ Hands-on programming labs include:
 
 Labs follow the official **2025 course schedule**, with progressive  
 difficulty and direct links to lecture content.  
-:contentReference[oaicite:2]{index=2}
-
 ---
 
 ## 🎓 Teaching Style
@@ -106,9 +103,7 @@ Cyber Safety Lab · Gyeongsang National University
 2025년 강의계획서에 따라,  
 **알고리즘 분석 → 선형 구조 → 비선형 구조 → 재귀 → 그래프 → 정렬 → 탐색**  
 으로 이어지는 전형적인 자료구조 커리큘럼을 체계적으로 학습합니다.  
-:contentReference[oaicite:3]{index=3}
-
-전체 주차별 스케줄은 아래에서 확인 가능합니다: 👉 <a herf="https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing"> 여기 </a>
+전체 주차별 스케줄은 아래에서 확인 가능합니다: 👉 <a href="https://docs.google.com/spreadsheets/d/1F9g8AfNcwnx13KcR04T-sFd3GpOq8e0zlUH3vPfDnOU/edit?usp=sharing"> 여기 </a>
 
 ---
 
